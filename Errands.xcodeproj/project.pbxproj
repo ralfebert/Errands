@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF44555220F3726300AB18C6 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF44555120F3726300AB18C6 /* CloudKit.framework */; };
 		BFD0697A1FCC2116009BD625 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD069791FCC2116009BD625 /* AppDelegate.swift */; };
 		BFD0697F1FCC2116009BD625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD0697D1FCC2116009BD625 /* Main.storyboard */; };
 		BFD069811FCC2116009BD625 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD069801FCC2116009BD625 /* Assets.xcassets */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF44554F20F3725F00AB18C6 /* Errands.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Errands.entitlements; sourceTree = "<group>"; };
+		BF44555120F3726300AB18C6 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		BFD069761FCC2116009BD625 /* Errands.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Errands.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD069791FCC2116009BD625 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFD0697E1FCC2116009BD625 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -29,17 +32,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF44555220F3726300AB18C6 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF44555020F3726300AB18C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF44555120F3726300AB18C6 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BFD0696D1FCC2116009BD625 = {
 			isa = PBXGroup;
 			children = (
 				BFD069781FCC2116009BD625 /* Errands */,
 				BFD069771FCC2116009BD625 /* Products */,
+				BF44555020F3726300AB18C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +67,7 @@
 		BFD069781FCC2116009BD625 /* Errands */ = {
 			isa = PBXGroup;
 			children = (
+				BF44554F20F3725F00AB18C6 /* Errands.entitlements */,
 				BFD069791FCC2116009BD625 /* AppDelegate.swift */,
 				BFD0697D1FCC2116009BD625 /* Main.storyboard */,
 				BFD069801FCC2116009BD625 /* Assets.xcassets */,
@@ -97,6 +111,14 @@
 					BFD069751FCC2116009BD625 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -274,7 +296,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Errands/Errands.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Errands/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Errands;
@@ -288,7 +312,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Errands/Errands.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Errands/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Errands;
