@@ -4,7 +4,7 @@ import UIKit
 struct Errand {
 
     fileprivate static let recordType = "Errand"
-    fileprivate static let keys = (name : "name")
+    fileprivate static let keyName = "name"
 
     var record : CKRecord
 
@@ -18,10 +18,10 @@ struct Errand {
 
     var name : String {
         get {
-            return self.record.value(forKey: Errand.keys.name) as! String
+            return self.record.value(forKey: Errand.keyName) as! String
         }
         set {
-            self.record.setValue(newValue, forKey: Errand.keys.name)
+            self.record.setValue(newValue, forKey: Errand.keyName)
         }
     }
 
